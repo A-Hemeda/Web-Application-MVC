@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Tittle</title>
+    <link href="~/lib_resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @*Start Header*@
+    <nav class="mt-5">
+        <center>
+           @*  <a class="btn btn-primary" href="/Home/Index"> Home </a> *@
+
+            @* @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-primary" }) *@
+            @* asp-route-id="10" *@
+
+            <a class="btn btn-primary" asp-controller ="Home" asp-action="Index" > Home </a>
+
+            <a class="btn btn-info" asp-controller="Home" asp-action="AboutUs"> AboutUs </a>
+           @*  <a class="btn btn-info" href="/Home/AboutUs"> AboutUs </a> *@
+
+            <a class="btn btn-dark" asp-controller="Home" asp-action="Privacy"> Privacy </a>
+            @* <a class="btn btn-dark" href="/Home/Privacy"> Privacy </a> *@
+
+            <a class="btn btn-link" asp-controller="Home" asp-action="ContactUs"> ContactUs </a>
+            @* <a class="btn btn-link" href="/Home/ContactUs"> ContactUs </a> *@
+
+
+            <a class="btn btn-success" asp-controller="Account" asp-action="LogIn"> LogIn </a>
+           @*  <a class="btn btn-success" href="/Account/LogIn"> LogIn </a> *@
+
+
+            <a class="btn btn-danger" asp-controller="Account" asp-action="Register"> Register </a>
+            @* <a class="btn btn-danger" href="/Account/Register"> Register </a> *@
+
+        </center>
+
+    </nav>
+    @*End Header*@
+    <div>
+        @RenderBody()
+    </div>
+
+    @*Start Footer*@
+    <footer class="mt-5">
+        <center>
+            <div>
+                <p> CopyRights &copy; Route @DateTime.Now.Year </p>
+            </div>
+        </center>
+
+    </footer>
+    @*End Footer*@
+</body>
+</html>
